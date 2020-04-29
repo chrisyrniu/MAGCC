@@ -11,6 +11,7 @@ import visdom
 import data
 from models import *
 from comm import CommNetMLP
+from gccomm import GCCommNetMLP
 from utils import *
 from action_utils import parse_action_args
 from trainer import Trainer
@@ -168,7 +169,7 @@ torch.manual_seed(args.seed)
 print(args)
 
 if args.commnet:
-    policy_net = CommNetMLP(args, num_inputs)
+    policy_net = GCCommNetMLP(args, num_inputs)
 elif args.random:
     policy_net = Random(args, num_inputs)
 elif args.recurrent:
