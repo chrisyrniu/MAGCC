@@ -23,5 +23,3 @@ python -u main.py \
   | tee train.log
 
 #  --render \
-#   --plot \
-#   --plot_env ic3_scoring_1000_hid_128_adv_0 \
