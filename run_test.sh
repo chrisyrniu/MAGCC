@@ -5,7 +5,8 @@ python -u test.py \
   --nagents 3 \
   --nprocesses 1 \
   --num_epochs 200 \
-  --hid_size 256 \
+  --epoch_size 10 \
+  --hid_size 128 \
   --detach_gap 10 \
   --lrate 0.001 \
   --max_steps 100 \
@@ -15,8 +16,8 @@ python -u test.py \
   --num_controlled_lagents 3 \
   --num_controlled_ragents 0 \
   --reward_type scoring \
-  --run_num 2 \
-  --ep_num 270 \
+  --run_num 1 \
+  --ep_num 250 \
   | tee test.log
 
 #  --render \
