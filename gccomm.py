@@ -194,7 +194,9 @@ class GCCommNetMLP(nn.Module):
             
             comm = comm.view(n * batch_size, self.hid_size)
 #             comm = F.relu(self.gconv1(comm, edge))
-            comm = self.gconv1(comm, edge)
+#             comm = self.gconv1(comm, edge)
+            comm = F.relu(self.gconv1(comm, edge))
+            comm = self.gconv2(comm, edge)
             
             # Mask communication to dead agents
             comm = comm.view(batch_size, n, self.hid_size)
